@@ -60,11 +60,11 @@ public class EspecialidadeResourceRESTService {
 
     @Inject
     private EspecialidadeRepository repository;
-
+    
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Especialidade> listAllMembers() {
-        return repository.findAllOrderedByName();
+    	return repository.findAllOrderedByName();
     }
 
 }

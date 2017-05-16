@@ -16,6 +16,7 @@
  */
 package br.com.jhonataribeiro.service;
 
+import br.com.jhonataribeiro.model.Medico;
 import br.com.jhonataribeiro.model.Member;
 
 import javax.ejb.Stateless;
@@ -35,11 +36,11 @@ public class MedicoRegistration {
     private EntityManager em;
 
     @Inject
-    private Event<Member> memberEventSrc;
+    private Event<Medico> medicoEventSrc;
 
-    public void register(Member member) throws Exception {
-        log.info("Registering " + member.getName());
-        em.persist(member);
-        memberEventSrc.fire(member);
+    public void register(Medico medico) throws Exception {
+        log.info("Registering " + medico.getPrimeiroNome());
+        em.persist(medico);
+        medicoEventSrc.fire(medico);
     }
 }

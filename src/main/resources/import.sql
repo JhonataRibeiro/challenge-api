@@ -25,5 +25,5 @@ insert into Especialidade (especialidade_id, titulo) values (4,'Neurologista');
 insert into Especialidade (especialidade_id, titulo) values (5,'Pneumologista');
 insert into Especialidade (especialidade_id, titulo) values (6,'Psiquiatra');
 
-insert into Medico(id, primeiroNome, ultimoNome, email, ativo, cidade, estado, status, especialidade_id) values (1,'Lucas','Santos da Silba','lucas@gmail.com',true,'Brasilia','DF','ativo',1);
-insert into Medico(id, primeiroNome, ultimoNome, email, ativo, cidade, estado, status, especialidade_id) values (2,'Diogo','Silveira da Costa','diego@gmail.com',true,'Goiania','GO','ativo',2);
+--insert into Medico(id, primeiroNome, ultimoNome, email, ativo, cidade, estado, status, especialidade_id) values (1,'Lucas','Santos da Silba','lucas@gmail.com',true,'Brasilia','DF','ativo',1);
+--insert into Medico(id, primeiroNome, ultimoNome, email, ativo, cidade, estado, status, especialidade_id) values (2,'Diogo','Silveira da Costa','diego@gmail.com',true,'Goiania','GO','ativo',2);

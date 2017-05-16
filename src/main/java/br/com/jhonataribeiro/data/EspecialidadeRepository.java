@@ -43,4 +43,16 @@ public class EspecialidadeRepository {
         criteria.select(especialidade);
         return em.createQuery(criteria).getResultList();
     }
+    
+    
+    public Especialidade findByID(int id) {
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Especialidade> criteria = cb.createQuery(Especialidade.class);
+        Root<Especialidade> especialidade = criteria.from(Especialidade.class);
+        // Swap criteria statements if you would like to try out type-safe criteria queries, a new
+        // feature in JPA 2.0
+        // criteria.select(member).where(cb.equal(member.get(Member_.name), email));
+        criteria.select(especialidade).where(cb.equal(especialidade.get("id"), id));
+        return em.createQuery(criteria).getSingleResult();
+    }
 }

@@ -49,7 +49,7 @@ public class Medico implements Serializable {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private int id;
 
     @NotNull
     @Size(min = 1, max = 100)
@@ -92,7 +92,7 @@ public class Medico implements Serializable {
 	@JoinColumn(name="especialidade_id")
     private Especialidade especialidade;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -161,7 +161,7 @@ public class Medico implements Serializable {
 		this.especialidade = especialidade;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

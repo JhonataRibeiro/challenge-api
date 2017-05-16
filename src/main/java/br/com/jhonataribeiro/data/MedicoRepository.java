@@ -29,6 +29,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.logging.Logger;
 
+import br.com.jhonataribeiro.model.Especialidade;
 import br.com.jhonataribeiro.model.Medico;
 import br.com.jhonataribeiro.model.Member;
 
@@ -43,7 +44,7 @@ public class MedicoRepository {
     public Medico findById(Long id) {
         return em.find(Medico.class, id);
     }
-
+    
     public Medico findByEmail(String email) {
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery<Medico> criteria = cb.createQuery(Medico.class);

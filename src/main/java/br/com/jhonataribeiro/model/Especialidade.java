@@ -49,7 +49,7 @@ public class Especialidade implements Serializable {
 	@Id
 	@GeneratedValue
 	@Column(name = "especialidade_id")
-	private Long id;
+	private int id;
 
 	@NotNull
 	@Size(min = 1, max = 100)
@@ -61,11 +61,11 @@ public class Especialidade implements Serializable {
 	//@OneToMany(mappedBy="especialidade",fetch=FetchType.EAGER, cascade=CascadeType.ALL)
 	//private Set<Medico> medicos= new HashSet<Medico>();
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
