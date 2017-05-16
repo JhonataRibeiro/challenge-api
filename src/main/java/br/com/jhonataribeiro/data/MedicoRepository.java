@@ -31,7 +31,7 @@ import java.util.logging.Logger;
 
 import br.com.jhonataribeiro.model.Especialidade;
 import br.com.jhonataribeiro.model.Medico;
-import br.com.jhonataribeiro.model.Member;
+
 
 @ApplicationScoped
 public class MedicoRepository {

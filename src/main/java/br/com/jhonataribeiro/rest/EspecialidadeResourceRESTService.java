@@ -41,10 +41,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import br.com.jhonataribeiro.data.EspecialidadeRepository;
-import br.com.jhonataribeiro.data.MemberRepository;
 import br.com.jhonataribeiro.model.Especialidade;
-import br.com.jhonataribeiro.model.Member;
-import br.com.jhonataribeiro.service.MemberRegistration;
+
 
 /**
  * JAX-RS Example

@@ -25,7 +25,7 @@ import javax.persistence.criteria.Root;
 import java.util.List;
 
 import br.com.jhonataribeiro.model.Especialidade;
-import br.com.jhonataribeiro.model.Member;
+
 
 @ApplicationScoped
 public class EspecialidadeRepository {

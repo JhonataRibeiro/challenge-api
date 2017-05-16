@@ -17,7 +17,6 @@
 package br.com.jhonataribeiro.service;
 
 import br.com.jhonataribeiro.model.Medico;
-import br.com.jhonataribeiro.model.Member;
 
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
