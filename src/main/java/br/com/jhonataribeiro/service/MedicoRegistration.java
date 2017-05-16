@@ -43,4 +43,10 @@ public class MedicoRegistration {
         em.persist(medico);
         medicoEventSrc.fire(medico);
     }
+    
+    public void update(Medico medico) throws Exception {
+        log.info("Registering " + medico.getPrimeiroNome());
+        em.merge(medico);
+        medicoEventSrc.fire(medico);
+    }
 }
