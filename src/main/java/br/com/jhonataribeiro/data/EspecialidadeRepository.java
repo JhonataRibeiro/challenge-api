@@ -40,7 +40,7 @@ public class EspecialidadeRepository {
         // Swap criteria statements if you would like to try out type-safe criteria queries, a new
         // feature in JPA 2.0
         // criteria.select(member).orderBy(cb.asc(member.get(Member_.name)));
-        criteria.select(especialidade).orderBy(cb.asc(especialidade.get("titulo")));
+        criteria.select(especialidade);
         return em.createQuery(criteria).getResultList();
     }
 }

@@ -37,6 +37,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -84,9 +85,11 @@ public class Medico implements Serializable {
     @Column
     private String status;
     
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="id_especialidade",nullable=false)
-	@NotNull
+//    @ManyToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name="id_especialidade",nullable=false)
+//	@NotNull
+    @ManyToOne
+	@JoinColumn(name="especialidade_id")
     private Especialidade especialidade;
 
     public Long getId() {
@@ -149,6 +152,7 @@ public class Medico implements Serializable {
 		this.status = status;
 	}
 
+	
 	public Especialidade getEspecialidade() {
 		return especialidade;
 	}

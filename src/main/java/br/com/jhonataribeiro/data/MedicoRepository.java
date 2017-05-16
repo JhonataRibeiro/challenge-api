@@ -22,7 +22,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 
 import br.com.jhonataribeiro.model.Medico;
@@ -59,6 +63,9 @@ public class MedicoRepository {
         // feature in JPA 2.0
         // criteria.select(member).orderBy(cb.asc(member.get(Member_.name)));
         criteria.select(medico).orderBy(cb.asc(medico.get("primeiroNome")));
-        return em.createQuery(criteria.distinct(true)).getResultList();
+         Set<Medico> hashset = new LinkedHashSet(em.createQuery(criteria.distinct(true)).getResultList());
+         List<Medico> list = new ArrayList<Medico>(hashset);
+         log.info("info:" + list);
+         return list;
     }
 }

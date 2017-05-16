@@ -18,12 +18,12 @@
 -- You can use this file to load seed data into the database using SQL statements
 insert into Member (id, name, email, phone_number) values (0, 'John Smith', 'john.smith@mailinator.com', '2125551212');
 
-insert into Especialidade (id, titulo) values (1,'Cardiologista');
-insert into Especialidade (id, titulo) values (2,'Ginecologita');
-insert into Especialidade (id, titulo) values (3,'Ortopedista');
-insert into Especialidade (id, titulo) values (4,'Neurologista');
-insert into Especialidade (id, titulo) values (5,'Pneumologista');
-insert into Especialidade (id, titulo) values (6,'Psiquiatra');
+insert into Especialidade (especialidade_id, titulo) values (1,'Cardiologista');
+insert into Especialidade (especialidade_id, titulo) values (2,'Ginecologita');
+insert into Especialidade (especialidade_id, titulo) values (3,'Ortopedista');
+insert into Especialidade (especialidade_id, titulo) values (4,'Neurologista');
+insert into Especialidade (especialidade_id, titulo) values (5,'Pneumologista');
+insert into Especialidade (especialidade_id, titulo) values (6,'Psiquiatra');
 
-insert into Medico(id, primeiroNome, ultimoNome, email, ativo, cidade, estado, status, id_especialidade) values (1,'Lucas','Santos da Silba','lucas@gmail.com',true,'Brasilia','DF','ativo',1);
-insert into Medico(id, primeiroNome, ultimoNome, email, ativo, cidade, estado, status, id_especialidade) values (2,'Diogo','Silveira da Costa','diego@gmail.com',true,'Goiania','GO','ativo',2);
+insert into Medico(id, primeiroNome, ultimoNome, email, ativo, cidade, estado, status, especialidade_id) values (1,'Lucas','Santos da Silba','lucas@gmail.com',true,'Brasilia','DF','ativo',1);
+insert into Medico(id, primeiroNome, ultimoNome, email, ativo, cidade, estado, status, especialidade_id) values (2,'Diogo','Silveira da Costa','diego@gmail.com',true,'Goiania','GO','ativo',2);

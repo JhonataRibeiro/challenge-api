@@ -17,7 +17,9 @@
 package br.com.jhonataribeiro.model;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -34,6 +36,8 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -44,6 +48,7 @@ public class Especialidade implements Serializable {
 
 	@Id
 	@GeneratedValue
+	@Column(name = "especialidade_id")
 	private Long id;
 
 	@NotNull
@@ -51,8 +56,10 @@ public class Especialidade implements Serializable {
 	@Pattern(regexp = "[^0-9]*", message = "Must not contain numbers")
 	private String titulo;
 	
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "especialidade", cascade = CascadeType.ALL)
-	private List<Medico> medicos;
+	
+	@JsonIgnore	
+	//@OneToMany(mappedBy="especialidade",fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+	//private Set<Medico> medicos= new HashSet<Medico>();
 
 	public Long getId() {
 		return id;
@@ -69,13 +76,14 @@ public class Especialidade implements Serializable {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-
-	public List<Medico> getMedicos() {
-		return medicos;
-	}
-
-	public void setMedicos(List<Medico> medicos) {
-		this.medicos = medicos;
-	}
+	
+	
+//	public Set<Medico> getMedicos() {
+//		return medicos;
+//	}
+//
+//	public void setMedicos(List<Medico> medicos) {
+//		this.medicos = (Set<Medico>) medicos;
+//	}
 
 }
