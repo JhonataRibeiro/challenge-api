@@ -19,6 +19,7 @@ conexão com o banco: WEB-INF/challenge-api-ds.xml
 
 :pushpin: TODO:
 -----------
+=> Setup .gitignore :page_facing_up: </br>
 => Autenticação com JWT :key: </br>
 => Delete :x:
 
