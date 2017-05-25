@@ -1,8 +1,8 @@
 challenge-api
 =======================
 
-API para realizar experimentos.
------------
+
+=> API para realizar experimentos
 
 Technologies: JAVA, CDI, JSF, JPA, EJB, JPA, JAX-RS, BV
 
