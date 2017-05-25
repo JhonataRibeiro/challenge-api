@@ -1,7 +1,10 @@
 challenge-api
-========================
+=======================
 
-Technologies: CDI, JSF, JPA, EJB, JPA, JAX-RS, BV
+API para realizar experimentos.
+-----------
+
+Technologies: JAVA, CDI, JSF, JPA, EJB, JPA, JAX-RS, BV
 
 Como rodar?
 -----------
@@ -13,6 +16,12 @@ Como rodar?
 OBS:
 -----------
 conexão com o banco: WEB-INF/challenge-api-ds.xml
+
+:pushpin: TODO:
+-----------
+=> Autenticação com JWT :key: 
+=> Delete :x:
+
 
  
 
